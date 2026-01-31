@@ -45,7 +45,7 @@ export default function HomePage() {
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
             backgroundImage:
-              "url(https://raw.githubusercontent.com/dewlonsystems/Dewlon-pictures/199282681dcdbf1c1e457ca9148e4cc1515f5c89/hero.jpg)",
+              "url(https://raw.githubusercontent.com/dewlonsystems/Dewlon-pictures/ae9c1a449d092a5d1a9b1d01cd83df19dc1e6a08/pexels-edmond-dantes-8554063.jpg)",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/40 z-10" />
