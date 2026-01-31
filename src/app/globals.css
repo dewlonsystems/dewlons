@@ -1,0 +1,38 @@
+/* src/app/globals.css */
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    --color-primary: #003c25; /* Deep Forest Green */
+    --color-secondary: #fdf5e6; /* Cream — page background */
+    --color-accent: #cc5500;   /* Burnt Orange — buttons, highlights */
+    --color-white: #ffffff;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #111827;
+  }
+
+  body {
+    @apply bg-[var(--color-secondary)] text-gray-900 font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--color-accent)] text-white px-6 py-3 rounded-md font-medium hover:bg-[#b34700] transition-colors;
+  }
+  .btn-outline {
+    @apply border-2 border-[var(--color-accent)] text-[var(--color-accent)] px-6 py-3 rounded-md font-medium hover:bg-[var(--color-accent)] hover:text-white transition-colors;
+  }
+}
+
+/* Horizontal testimonial scroll animation */
+@keyframes scroll-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll-x {
+  animation: scroll-x 30s linear infinite;
+}
+.animate-scroll-x:hover {
+  animation-play-state: paused;
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dewlons.com/sitemap.xml
+Host: https://dewlons.com
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /client-portal/
