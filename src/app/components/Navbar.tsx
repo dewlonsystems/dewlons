@@ -40,7 +40,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Real logo URL from Unsplash (public domain, replaceable)
+  // Real logo URL
   const logoUrl = "https://raw.githubusercontent.com/dewlonsystems/Dewlon-pictures/2e0edfd8eb82da1c4834ea017735a421d97a82fb/dew.png";
 
   return (
@@ -107,49 +107,65 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Sidebar */}
+      {/* Modern Full-Screen Centered Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
-          {/* Backdrop */}
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white px-6"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {/* Backdrop with subtle blur (optional but modern) */}
           <div
-            className="fixed inset-0 bg-black bg-opacity-50"
-            onClick={() => setIsMenuOpen(false)}
-          ></div>
-          {/* Sidebar */}
-          <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-xl flex flex-col">
-            <div className="p-6 border-b">
-              <div className="flex justify-between items-center">
-                <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                  <img
-                    src={logoUrl}
-                    alt="Dewlon Systems Logo"
-                    className="h-10"
-                  />
-                </Link>
-                <button onClick={() => setIsMenuOpen(false)} aria-label="Close menu">
-                  <FiX size={24} />
-                </button>
-              </div>
-            </div>
-            <nav className="flex-1 overflow-y-auto p-6">
-              <ul className="space-y-6">
+            className="absolute inset-0 bg-black/30 backdrop-blur-sm"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {/* Centered Content */}
+          <div
+            className="relative z-10 flex flex-col items-center justify-center w-full max-w-md space-y-8 p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="absolute top-6 right-6 text-gray-700 hover:text-[var(--color-primary)] transition-colors"
+              aria-label="Close menu"
+            >
+              <FiX size={24} />
+            </button>
+
+            {/* Logo */}
+            <Link href="/" onClick={() => setIsMenuOpen(false)}>
+              <img
+                src={logoUrl}
+                alt="Dewlon Systems Logo"
+                className="h-12 w-auto"
+              />
+            </Link>
+
+            {/* Nav Links */}
+            <nav className="w-full">
+              <ul className="space-y-6 text-center">
                 <li>
-                  <Link href="/" className="block font-medium" onClick={() => setIsMenuOpen(false)}>
+                  <Link
+                    href="/"
+                    className="block text-2xl font-medium text-gray-800 hover:text-[var(--color-primary)] transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     Home
                   </Link>
                 </li>
                 <li>
                   <details className="group">
-                    <summary className="list-none font-medium cursor-pointer flex justify-between items-center">
+                    <summary className="list-none text-2xl font-medium text-gray-800 cursor-pointer flex justify-center items-center gap-2">
                       Services
-                      <FiChevronDown className="transform group-open:rotate-180 transition-transform ml-1" />
+                      <FiChevronDown className="transform group-open:rotate-180 transition-transform" />
                     </summary>
-                    <ul className="mt-3 pl-4 space-y-3 border-l-2 border-gray-200">
+                    <ul className="mt-4 space-y-3">
                       {servicesList.map((service) => (
                         <li key={service}>
                           <Link
                             href={`/services/${slugify(service)}`}
-                            className="block text-gray-600 hover:text-[var(--color-primary)]"
+                            className="block text-lg text-gray-600 hover:text-[var(--color-primary)] transition-colors"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {service}
@@ -160,12 +176,20 @@ export default function Navbar() {
                   </details>
                 </li>
                 <li>
-                  <Link href="/about" className="block font-medium" onClick={() => setIsMenuOpen(false)}>
+                  <Link
+                    href="/about"
+                    className="block text-2xl font-medium text-gray-800 hover:text-[var(--color-primary)] transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="block font-medium" onClick={() => setIsMenuOpen(false)}>
+                  <Link
+                    href="/contact"
+                    className="block text-2xl font-medium text-gray-800 hover:text-[var(--color-primary)] transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     Contact
                   </Link>
                 </li>
