@@ -45,10 +45,10 @@ export default function HomePage() {
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
             backgroundImage:
-              "url(https://raw.githubusercontent.com/dewlonsystems/Dewlon-pictures/b41184a10eafc34953d16f6fc93363f583950ad9/codingscreen.jpg)",
+              "url(https://raw.githubusercontent.com/dewlonsystems/Dewlon-pictures/199282681dcdbf1c1e457ca9148e4cc1515f5c89/hero.jpg)",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/50 z-10" />
+        <div className="absolute inset-0 bg-black/40 z-10" />
         <div className="relative z-20 text-center text-white max-w-4xl px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Professional Software & Web Development in Nairobi
