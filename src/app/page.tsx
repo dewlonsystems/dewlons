@@ -56,11 +56,11 @@ export default function HomePage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Dewlon Systems builds scalable, secure, and user-friendly digital solutions for businesses across Kenya and beyond.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary inline-block">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link href="/contact" className="btn-primary w-full max-w-xs">
               Request a Quote
             </Link>
-            <Link href="/client-portal" className="btn-outline inline-block">
+            <Link href="/client-portal" className="btn-outline w-full max-w-xs">
               Client Portal
             </Link>
           </div>
@@ -555,11 +555,11 @@ export default function HomePage() {
           <p className="mb-8 text-lg opacity-90">
             Contact Dewlon Systems today for a free consultation and quote.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary inline-block">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link href="/contact" className="btn-primary w-full max-w-xs">
               Get Started Now
             </Link>
-            <Link href="/client-portal" className="btn-outline inline-block">
+            <Link href="/client-portal" className="btn-outline w-full max-w-xs">
               Client Portal
             </Link>
           </div>
