@@ -48,7 +48,7 @@ export default function HomePage() {
               "url(https://raw.githubusercontent.com/dewlonsystems/Dewlon-pictures/ae9c1a449d092a5d1a9b1d01cd83df19dc1e6a08/pexels-edmond-dantes-8554063.jpg)",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 bg-black/70 z-10" />
         <div className="relative z-20 text-center text-white max-w-4xl px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Professional Software & Web Development in Nairobi
