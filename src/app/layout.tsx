@@ -109,8 +109,29 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-96x96.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/logo.png" />
 
-        {/* Schema.org Structured Data */}
+
+        {/* ===================== WebSite Schema ===================== */}
         <script type="application/ld+json">
+         {JSON.stringify({
+           "@context": "https://schema.org",
+           "@type": "WebSite",
+           "@id": "https://dewlons.com/#website",
+           "url": "https://dewlons.com",
+           "name": "Dewlon Systems",
+           "alternateName": "Dewlon",
+           "publisher": {
+             "@type": "Organization",
+             "name": "Dewlon Systems",
+             "logo": {
+               "@type": "ImageObject",
+               "url": "https://dewlons.com/logo.png",
+              },
+            },
+          })}
+        </script>
+
+        {/* Schema.org Structured Data */}
+       <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
